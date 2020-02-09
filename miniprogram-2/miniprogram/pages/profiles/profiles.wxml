@@ -1,2 +1,9 @@
 <!--pages/profiles/profiles.wxml-->
-<text>pages/profiles/profiles.wxml</text>
+<!-- <text>pages/profiles/profiles.wxml</text> -->
+<view class="profile"></view>
+  <view class="profile-img">
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+<!-- 获取微信用户昵称 -->
+<open-data type="userNickName"></open-data>
+<button open-type="getUserInfo" bindgetuserinfo="onGotUserinfo">获取用户信息</button>

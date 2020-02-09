@@ -17,5 +17,5 @@
     </view>
     <view>年份：{{item.year}}</view>
   </view>
-<button bindtap="gotoComment" data-movieid="{{item.id}}" class="movie-comment">评价</button>
+<button size="mini" bindtap="gotoComment" data-movieid="{{item.id}}" class="movie-comment">评价</button>
 </view>
