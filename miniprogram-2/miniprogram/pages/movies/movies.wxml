@@ -1,0 +1,21 @@
+<!--pages/movies/movies.wxml-->
+<!-- <text>pages/movies/movies.wxml</text> -->
+<!-- <van-button type="default">默认按钮</van-button>
+<van-button type="primary">主要按钮</van-button>
+<van-button type="info">信息按钮</van-button>
+<van-button type="warning">警告按钮</van-button> -->
+<!-- <van-button type="danger">危险按钮</van-button> -->
+<view class="movie" wx:for="{{movieList}}" wx:key="index"> 
+  <image class="movie-img" src='{{item.images.small}}'></image>
+  <view class="movie-info">
+    <view class="movie-title">{{item.title}}</view>
+    <view>
+      <text class="movie-score">观众评分：{{item.rating.average}}分</text>
+    </view>
+    <view >主演：
+      <text wx:for="{{item.casts}}" wx:key="index">{{item.name}} </text>
+    </view>
+    <view>年份：{{item.year}}</view>
+  </view>
+<button bindtap="gotoComment" data-movieid="{{item.id}}" class="movie-comment">评价</button>
+</view>
